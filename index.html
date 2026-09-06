@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Portfolio</title>
+
+<!-- Bootstrap for grid + responsive utilities -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:#1B2A4A;
+    --navy-light:#2E4270;
+    --mustard:#C98A2C;
+    --paper:#F7F7F4;
+    --ink:#22252B;
+    --line:#DEDFDB;
+  }
+
+  * { box-sizing: border-box; }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', system-ui, sans-serif;
+    line-height:1.6;
+  }
+
+  h1, h2, h3, .display-serif{
+    font-family:'Newsreader', Georgia, serif;
+    color:var(--navy);
+    letter-spacing:-0.01em;
+  }
+
+  a{ color:var(--navy); }
+  a:hover{ color:var(--mustard); }
+
+  /* ---- Nav ---- */
+  .site-nav{
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    z-index:50;
+  }
+  .site-nav .navbar-brand{
+    font-family:'Newsreader', serif;
+    font-weight:600;
+    font-size:1.25rem;
+    color:var(--navy);
+  }
+  .site-nav .nav-link{
+    color:var(--ink);
+    font-weight:500;
+    margin-left:1rem;
+  }
+  .site-nav .nav-link:hover{ color:var(--mustard); }
+
+  /* ---- Hero ---- */
+  .hero{
+    padding:5rem 0 4rem;
+    border-bottom:1px solid var(--line);
+  }
+  .hero h1{
+    font-size:3rem;
+    margin-bottom:0.25rem;
+  }
+  .hero .title-line{
+    font-size:1.25rem;
+    color:var(--navy-light);
+    font-weight:500;
+  }
+  .hero .school-line{
+    color:#5b5f68;
+    margin-top:0.25rem;
+  }
+
+  section{
+    padding:3.5rem 0;
+    border-bottom:1px solid var(--line);
+    max-width: 100%;
+  }
+  section .section-inner{
+    max-width:760px;
+  }
+  section h2{
+    font-size:1.75rem;
+    margin-bottom:1.25rem;
+  }
+
+  /* ---- Skills ---- */
+  .skill-chip{
+    display:inline-block;
+    padding:0.4rem 0.9rem;
+    margin:0 0.5rem 0.5rem 0;
+    border:1px solid var(--navy);
+    border-radius:2px;
+    font-size:0.9rem;
+    color:var(--navy);
+    background:transparent;
+  }
+
+  /* ---- Projects ---- */
+  .project-card{
+    border:1px solid var(--line);
+    background:#fff;
+    padding:1.5rem;
+    height:100%;
+  }
+  .project-card h3{
+    font-size:1.15rem;
+    margin-bottom:0.5rem;
+  }
+  .project-card p{
+    color:#4b4f58;
+    margin-bottom:0;
+    font-size:0.95rem;
+  }
+
+  /* ---- Resume / Contact ---- */
+  .btn-navy{
+    background:var(--navy);
+    color:#fff;
+    border:none;
+    padding:0.65rem 1.4rem;
+    text-decoration:none;
+    display:inline-block;
+  }
+  .btn-navy:hover{ background:var(--mustard); color:#fff; }
+
+  .contact-list{ list-style:none; padding:0; margin:0; }
+  .contact-list li{ margin-bottom:0.6rem; }
+  .contact-list .label{
+    display:inline-block;
+    width:110px;
+    color:#5b5f68;
+    font-size:0.9rem;
+  }
+
+  footer{
+    padding:2rem 0;
+    text-align:center;
+    color:#8a8d94;
+    font-size:0.85rem;
+  }
+
+  @media (max-width: 576px){
+    .hero{ padding:3rem 0 2.5rem; }
+    .hero h1{ font-size:2.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav class="navbar navbar-expand-md site-nav">
+  <div class="container">
+    <a class="navbar-brand" href="#top">Your Name</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#skills">Skills</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#resume">Resume</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Header / Hero ===== -->
+<header class="hero" id="top">
+  <div class="container">
+    <h1>Your Name</h1>
+    <div class="title-line">Information Systems Student</div>
+    <div class="school-line">University of Utah</div>
+  </div>
+</header>
+
+<!-- ===== About Me ===== -->
+<section id="about">
+  <div class="container section-inner">
+    <h2>About Me</h2>
+    <p>
+      I'm an Information Systems student at the University of Utah with a focus on
+      [your major/emphasis]. I'm interested in a career in [career interest, e.g.,
+      business analysis, data analytics, IT consulting], and I'm especially drawn to
+      how artificial intelligence — like prompt engineering and AI-assisted workflows —
+      is changing the way businesses solve problems. On the technical side, I enjoy
+      working with [technical interests, e.g., data visualization, databases, web
+      development]. I'm building this portfolio to document projects and skills I
+      develop throughout my coursework, and to show how I apply IS concepts to
+      real-world business problems.
+    </p>
+  </div>
+</section>
+
+<!-- ===== Skills ===== -->
+<section id="skills">
+  <div class="container section-inner">
+    <h2>Skills</h2>
+    <div>
+      <span class="skill-chip">HTML</span>
+      <span class="skill-chip">CSS</span>
+      <span class="skill-chip">JavaScript</span>
+      <span class="skill-chip">Python</span>
+      <span class="skill-chip">SQL</span>
+      <span class="skill-chip">Git</span>
+      <span class="skill-chip">GitHub</span>
+      <span class="skill-chip">Microsoft Excel</span>
+      <span class="skill-chip">Data Analytics</span>
+      <span class="skill-chip">AI Prompt Engineering</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Projects ===== -->
+<section id="projects">
+  <div class="container">
+    <div class="section-inner">
+      <h2>Projects</h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="project-card">
+          <h3>AI Business Analysis</h3>
+          <p>Analyze business data using ChatGPT. Details and results coming as the project develops.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="project-card">
+          <h3>Data Visualization</h3>
+          <p>Dashboard built with Tableau. Details and results coming as the project develops.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="project-card">
+          <h3>Web Development</h3>
+          <p>Responsive Bootstrap website. Details and results coming as the project develops.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="project-card">
+          <h3>Process Improvement</h3>
+          <p>AI-assisted business workflow redesign. Details and results coming as the project develops.</p>
+        </div>
+      </div>
+    </div>
+    <p class="section-inner mt-3" style="color:#8a8d94; font-size:0.9rem;">
+      This section will be updated throughout the semester as projects are completed.
+    </p>
+  </div>
+</section>
+
+<!-- ===== Resume ===== -->
+<section id="resume">
+  <div class="container section-inner">
+    <h2>Resume</h2>
+    <p>Resume coming soon.</p>
+    <!--
+      Once you have a resume PDF, upload it to your repo (e.g. /resume.pdf)
+      and replace the paragraph above with:
+
+      <a class="btn-navy" href="resume.pdf" target="_blank">Download Resume (PDF)</a>
+    -->
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact" style="border-bottom:none;">
+  <div class="container section-inner">
+    <h2>Contact</h2>
+    <ul class="contact-list">
+      <li><span class="label">Email</span> <a href="mailto:you@utah.edu">you@utah.edu</a></li>
+      <li><span class="label">LinkedIn</span> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></li>
+      <li><span class="label">GitHub</span> <a href="https://github.com/username" target="_blank">github.com/username</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Your Name. Built for IS 3060.
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
