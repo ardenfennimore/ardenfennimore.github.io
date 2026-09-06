@@ -11,7 +11,7 @@ site is updated throughout the semester as new projects are completed.
 ## Technologies Used
 
 - GitHub Pages
-- Claude
+- HTML
 
 ## Website
 
